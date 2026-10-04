@@ -1,0 +1,50 @@
+#ifndef MYPYC_NATIVE_H
+#define MYPYC_NATIVE_H
+#include <Python.h>
+#include <CPy.h>
+typedef struct {
+    PyObject_HEAD
+    CPyVTableItem *vtable;
+    PyObject *_BC;
+    PyObject *_PC;
+    PyObject *_AF;
+    PyObject *_DE;
+    PyObject *_HL;
+    PyObject *_SP;
+    PyObject *_Rombank;
+    PyObject *_Rambank;
+    PyObject *_IO;
+    PyObject *_A;
+    PyObject *_B;
+    PyObject *_C;
+    PyObject *_D;
+    PyObject *_E;
+    PyObject *_F;
+    PyObject *_H;
+    PyObject *_L;
+    PyObject *_OAM;
+    PyObject *_IER;
+    PyObject *_cycles;
+    PyObject *_s;
+    PyObject *_Ramswitch;
+    PyObject *_Romswitch;
+    PyObject *_MCB;
+    PyObject *_RamEnabled;
+    PyObject *_VRAM;
+    PyObject *_R;
+    PyObject *_WRAM;
+    PyObject *_HRAM;
+    PyObject *_oplist;
+    PyObject *_paused;
+    PyObject *_ECHO;
+    PyObject *_IMF;
+    PyObject *_loc;
+    PyObject *_Call;
+    PyObject *_current_cycles;
+    PyObject *_Not_Usable;
+    PyObject *_disable_Vram;
+    PyObject *_disable_OAM;
+    PyObject *_Timer_Counter;
+} CPU___OpcodeObject;
+
+#endif
